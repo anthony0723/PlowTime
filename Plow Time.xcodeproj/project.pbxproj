@@ -15,6 +15,7 @@
 		C39D51552215C7C600F849D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39D51532215C7C600F849D4 /* LaunchScreen.storyboard */; };
 		C39D51602215C7C700F849D4 /* Plow_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D515F2215C7C700F849D4 /* Plow_TimeTests.swift */; };
 		C39D516B2215C7C700F849D4 /* Plow_TimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D516A2215C7C700F849D4 /* Plow_TimeUITests.swift */; };
+		C39D51802215CC0C00F849D4 /* ButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D517F2215CC0C00F849D4 /* ButtonVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C39C6E0622174F9A00787B29 /* Plow Time.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Plow Time.entitlements"; sourceTree = "<group>"; };
 		C39D51442215C7C500F849D4 /* Plow Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plow Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39D51472215C7C500F849D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C39D51492215C7C500F849D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		C39D51662215C7C700F849D4 /* Plow TimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plow TimeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39D516A2215C7C700F849D4 /* Plow_TimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plow_TimeUITests.swift; sourceTree = "<group>"; };
 		C39D516C2215C7C700F849D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C39D517F2215CC0C00F849D4 /* ButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +102,12 @@
 		C39D51462215C7C500F849D4 /* Plow Time */ = {
 			isa = PBXGroup;
 			children = (
+				C39C6E0622174F9A00787B29 /* Plow Time.entitlements */,
 				C39D51472215C7C500F849D4 /* AppDelegate.swift */,
-				C39D51492215C7C500F849D4 /* ViewController.swift */,
+				C39D51792215C9F200F849D4 /* Model */,
+				C39D51782215C9E200F849D4 /* Controllers */,
 				C39D514B2215C7C500F849D4 /* Main.storyboard */,
 				C39D51512215C7C600F849D4 /* Assets.xcassets */,
-				C39D51532215C7C600F849D4 /* LaunchScreen.storyboard */,
 				C39D51562215C7C600F849D4 /* Info.plist */,
 				C39D514E2215C7C500F849D4 /* Plow_Time.xcdatamodeld */,
 			);
@@ -126,6 +130,23 @@
 				C39D516C2215C7C700F849D4 /* Info.plist */,
 			);
 			path = "Plow TimeUITests";
+			sourceTree = "<group>";
+		};
+		C39D51782215C9E200F849D4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C39D51492215C7C500F849D4 /* ViewController.swift */,
+				C39D51532215C7C600F849D4 /* LaunchScreen.storyboard */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C39D51792215C9F200F849D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C39D517F2215CC0C00F849D4 /* ButtonVC.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +217,11 @@
 				TargetAttributes = {
 					C39D51432215C7C500F849D4 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					C39D515A2215C7C700F849D4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -261,6 +287,7 @@
 			files = (
 				C39D514A2215C7C500F849D4 /* ViewController.swift in Sources */,
 				C39D51502215C7C500F849D4 /* Plow_Time.xcdatamodeld in Sources */,
+				C39D51802215CC0C00F849D4 /* ButtonVC.swift in Sources */,
 				C39D51482215C7C500F849D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Plow Time/Plow Time.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TYAA352Y59;
 				INFOPLIST_FILE = "Plow Time/Info.plist";
@@ -454,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Plow Time/Plow Time.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TYAA352Y59;
 				INFOPLIST_FILE = "Plow Time/Info.plist";
